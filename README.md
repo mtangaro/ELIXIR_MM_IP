@@ -6,7 +6,7 @@ BioMaS: a modular pipeline for Bioinformatic analysis of Metagenomic AmpliconS (
 
 ### Dependencies
 
-1. xvfb-run has to be installed on your instance (and on each Worker Node if using a cluster).
+1. xvfb-run has to be installed on your instance (and on each Worker Node if using a cluster),
    to run the ETE toolkit: http://etetoolkit.org/docs/latest/tutorial/tutorial_webplugin.html
 
 Ubuntu 16.04
@@ -23,8 +23,17 @@ CentOS 7
 
 2. Install usearch on each Cluster Worker Node, copying it in /usr/bin
 
-Troubleshooting
----------------
+3. Needed scripts:
+- quality_check_and_consensus.py
+- dereplicate_fastq.py
+- bowtie2-execution_ITSoneDB.py
+- perl_tango_execution.sh
+- new_tree_builder_for_perl_tango.py
+
+4. Put New_TANGO_perl_version directory in /home/galaxy.
+
+### Troubleshooting
+
 1. fastqc fix: type this command inside the conda environment
 ```
 <conda_prefix>/bin/conda install -y --name mulled-v1-52d3dd165352f3c2fa0613c44045f9f49653b44c9906c50bba2a986824f9e457 openjdk --channel conda-forge
