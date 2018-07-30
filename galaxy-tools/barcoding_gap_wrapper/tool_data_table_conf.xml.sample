@@ -1,0 +1,12 @@
+<table name="biomas_bowtie2_indexes" comment_char="#">
+    <columns>value, dbkey, name, path</columns>
+    <file path="tool-data/biomas_bowtie2_indexes.loc" />
+</table>
+<table name="biomas_mapping_files" comment_char="#">
+    <columns>value, name, path</columns>
+    <file path="tool-data/biomas_mapping_files.loc" />
+</table>
+<table name="biomas_tango_indexes" comment_char="#">
+    <columns>value, name, path</columns>
+    <file path="tool-data/biomas_tango_indexes.loc" />
+</table>

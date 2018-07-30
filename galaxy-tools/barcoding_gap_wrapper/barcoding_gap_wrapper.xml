@@ -1,0 +1,54 @@
+<tool id="barcoding_gap_wrapper" name="Barcoding Gap Calculation" version="0.1.0">
+  <!--description>placeholder</description-->
+
+  <command>
+    <![CDATA[
+
+    python $__tool_directory__/print_bg.py
+
+    ## distance file
+    -d "$distance_file.fields.path"
+
+    ## taxon name
+    -n "$taxon_list_file.fields.value"
+
+    ## taxon rank
+    -r "$taxon_list_file.fields.rank"
+
+    ]]>
+  </command>
+
+  <inputs>
+
+    <param name="distance_file" type="select" hidden="true">
+      <options from_data_table="barcoding_gap_distance_files" >
+        <filter type="static_value" name="type" value="tool_distance_file" column="0"/>
+      </options>
+    </param>
+
+    <param name="taxon_list_file" type="select" >
+      <options from_data_table="barcoding_taxon_list_file" />
+    </param>
+
+  </inputs>
+
+  <outputs>
+    <data format="txt" name="barcoding_gap" />
+  </outputs>
+
+  <stdio>
+    <regex match="No intraspecies data"
+           source="both"
+           level="fatal"
+           description="No intraspecies data" />
+  </stdio>
+
+  <tests>
+    <test>
+      <param name="input" value="name"/>
+      <output name="output" value="text" />
+    </test>
+  </tests>
+
+
+</tool>
