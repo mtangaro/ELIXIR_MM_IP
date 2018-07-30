@@ -263,7 +263,7 @@ def itsonedb_wrapper():
 
   options = cli_options()
 
-  itsonedb = 'mysql://galaxy:its1wbPASS@90.147.75.105:3306/itsonedb'
+  itsonedb = 'mysql://galaxy:its1wbPASS@90.147.75.12:3306/itsonedb'
   engine, connection, metadata = db_connection(itsonedb)
   
   # gli output finali devono essere 3: un file di statistiche, e i due fasta.
