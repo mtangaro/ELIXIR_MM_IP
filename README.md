@@ -4,8 +4,11 @@ ELIXIR_MM_IP
 ELIXIR Marine Metagenomics Implementation Plan
 
 
+BioMaS galaxy wrpper
+--------------------
+
 Dependencies
-------------
+~~~~~~~~~~~~
 
 1. xvfb-run has to be installed on each Worker Node.
 
